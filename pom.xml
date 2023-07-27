@@ -1,0 +1,249 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Rest_Assure_Hackathon</groupId>
+  <artifactId>Rest_Assure_Hackathon</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+	<build>
+	    
+    
+	 <plugins>
+	
+			
+			    
+			   <!-- <plugin>
+			
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-surefire-plugin</artifactId>
+			    <version>3.0.0</version>
+	      		<configuration>
+					  <includes>
+							<include>C:/Users/subas/Rest-Assure-Hackathon/Rest_Assure_Hackathon/src/test/java/runner/Runner</include>
+						</includes>
+            	</configuration>
+		</plugin>      		-->
+			    
+		
+		<!--<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.0.0</version>
+    <configuration>
+		
+		<suiteXmlFiles>
+		<suiteXMLFile>testng.xml</suiteXMLFile>		
+		</suiteXmlFiles>
+	</configuration>
+</plugin>-->
+		<!--<plugin>
+			
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+			<configuration>
+          	<source>11</source>
+          	<target>11</target>
+        	</configuration>
+			</plugin>-->
+			
+			<plugin>
+            <artifactId>maven-clean-plugin</artifactId>
+            <version>3.1.0</version>
+            <executions>
+              <execution>
+                    <id>clean-allure-results</id>
+                    <phase>clean</phase>
+                    <goals>
+                        <goal>clean</goal>
+                    </goals>
+                    <configuration>
+                        <filesets>
+                            <fileset>
+                                <directory>Rest_Assure_Hackathon\allure-results</directory>
+                            </fileset>
+                        </filesets>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+        <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.0.0</version>
+    <configuration>		
+		<suiteXmlFiles>
+		<suiteXMLFile>${SuiteFileName}</suiteXMLFile>		
+		</suiteXmlFiles>
+	</configuration>
+</plugin>
+		<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.10.1</version>
+			<configuration>
+          	<source>11</source>
+          	<target>11</target>
+        	</configuration>
+			</plugin>
+			
+			
+	</plugins>
+</build>
+  
+  <dependencies>
+	  
+	  <dependency>
+		<groupId>io.rest-assured</groupId>
+		<artifactId>rest-assured</artifactId>
+		<version>4.4.0</version>
+	</dependency>
+	<dependency>
+		<groupId>io.rest-assured</groupId>
+		<artifactId>json-path</artifactId>
+		<version>4.4.0</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.7.1</version>
+			<scope>test</scope>
+		</dependency>
+<dependency>
+  <groupId>org.hamcrest</groupId>
+  <artifactId>hamcrest-all</artifactId>
+  <version>1.3</version>
+  <scope>test</scope>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.15.2</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-core</artifactId>
+    <version>2.15.2</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-annotations</artifactId>
+    <version>2.15.2</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+<dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.10.1</version>
+</dependency>
+
+
+	<dependency>
+		<groupId>io.rest-assured</groupId>
+		<artifactId>json-schema-validator</artifactId>
+		<version>4.4.0</version>
+	</dependency>
+	<dependency>
+    <groupId>com.googlecode.json-simple</groupId>
+    <artifactId>json-simple</artifactId>
+    <version>1.1.1</version>
+</dependency>
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>6.10.4</version>
+</dependency>
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit</artifactId>
+    <version>6.10.4</version>
+    <scope>test</scope>
+</dependency>
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-cucumber6-jvm</artifactId>
+    <version>2.13.6</version>
+</dependency>
+<dependency>
+  <groupId>io.rest-assured</groupId>
+  <artifactId>xml-path</artifactId>
+  <version>4.3.2</version>
+  <scope>test</scope>
+  </dependency>
+
+<dependency>
+	<groupId>junit</groupId>
+	<artifactId>junit</artifactId>
+	<version>4.13.2</version>
+	<scope>test</scope>
+</dependency>
+	<!--
+		https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
+		<dependency>
+			<groupId>tech.grasshopper</groupId>
+			<artifactId>extentreports-cucumber7-adapter</artifactId>
+			<version>1.13.0</version>
+		</dependency>
+
+		<!--
+		https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber6-adapter -->
+		<dependency>
+			<groupId>tech.grasshopper</groupId>
+			<artifactId>extentreports-cucumber6-adapter</artifactId>
+			<version>2.17.0</version>
+		</dependency>
+	<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.19.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.19.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>5.2.3</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>5.2.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+	<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+			<dependency>
+			    <groupId>io.qameta.allure</groupId>
+			    <artifactId>allure-testng</artifactId>
+			    <version>2.22.0</version>
+			</dependency>
+<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-cucumber7-jvm</artifactId>
+    <version>2.17.3</version>
+</dependency>
+<dependency>
+<groupId>io.cucumber</groupId>	
+<artifactId>cucumber-testng</artifactId>
+<version>7.13.0</version>
+</dependency>
+
+
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.24</version>
+    <scope>provided</scope>
+</dependency>
+  </dependencies>
+</project>
